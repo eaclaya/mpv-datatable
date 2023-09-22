@@ -20,7 +20,7 @@ addLocale('es', {
     today: 'Hoy',
     clear: 'Limpiar',
     apply: 'Aplicar',
-    matchAll: 'Igual',
+    matchAll: 'Todos',
     matchAny: 'Cualquier',
     startsWith: 'Inicia con',
     contains: 'Contiene',
