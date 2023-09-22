@@ -94,16 +94,26 @@ const ProductTable = () => {
     return (
         <div className="w-full">
             <h1>Listado de productos</h1>
-            {/* <div className="flex justify-content-between">
-                <Button type="button" icon="pi pi-filter-slash" label="Limpiar" outlined onClick={clearFilter} />
-                <span className="p-input-icon-left">
-                    <i className="pi pi-search" />
-                    <InputText value={globalFilterValue} onChange={onGlobalFilterChange} placeholder="Buscar" />
-                </span>
-            </div> */}
+
             <DataTable value={products} loading={loading} paginator showGridlines rows={10} dataKey="id" filterDisplay="menu" className="w-full">
                 <Column sortable field="notes" header="Producto" style={{ minWidth: '12rem' }} filter filterMatchMode={FilterMatchMode.STARTS_WITH}>
-                    <input type="text" className="p-column-filter" placeholder="Search by name" />
+                    <input type="text" className="p-column-filter" placeholder="Buscar" />
+                </Column>
+                <Column sortable field="Color" header="Color" style={{ minWidth: '12rem' }} filter filterMatchMode={FilterMatchMode.STARTS_WITH}>
+                    <input type="text" className="p-column-filter" placeholder="Buscar" />
+                </Column>
+                <Column sortable field="Grado" header="Grado" style={{ minWidth: '12rem' }} filter filterMatchMode={FilterMatchMode.STARTS_WITH}>
+                    <input type="text" className="p-column-filter" placeholder="Buscar" />
+                </Column>
+                <Column
+                    sortable
+                    field="Capacidad"
+                    header="Capacidad"
+                    style={{ minWidth: '12rem' }}
+                    filter
+                    filterMatchMode={FilterMatchMode.STARTS_WITH}
+                >
+                    <input type="text" className="p-column-filter" placeholder="Buscar" />
                 </Column>
                 <Column sortable field="qty" header="Cantidad" style={{ minWidth: '10rem' }} filter filterMatchMode={FilterMatchMode.EQUALS}>
                     <input type="text" />
