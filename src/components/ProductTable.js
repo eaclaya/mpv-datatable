@@ -95,7 +95,7 @@ const ProductTable = () => {
         <div className="w-full">
             <h1>Listado de productos</h1>
 
-            <DataTable value={products} loading={loading} paginator showGridlines rows={10} dataKey="id" filterDisplay="menu" className="w-full">
+            <DataTable value={products} loading={loading} paginator showGridlines rows={10} rowsPerPageOptions={[ 10, 25, 50]} dataKey="id" filterDisplay="menu" className="w-full">
                 <Column sortable field="notes" header="Producto" style={{ minWidth: '12rem' }} filter filterMatchMode={FilterMatchMode.STARTS_WITH}>
                     <input type="text" className="p-column-filter" placeholder="Buscar" />
                 </Column>
